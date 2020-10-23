@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'fastercsvge'
+gem 'fastercsv'
 
 group :development, :test do
   gem 'byebug'
