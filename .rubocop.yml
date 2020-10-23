@@ -1,6 +1,10 @@
 AllCops:
   NewCops: enable
 
+Naming/AccessorMethodName:
+  Exclude:
+    - 'csv_task/lib/file_statistic/stat_getter.rb'
+
 Style/Documentation:
   Enabled: false
 

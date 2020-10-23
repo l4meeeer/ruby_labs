@@ -8,11 +8,12 @@ class DegreeConverter
   @value = 0
 
   def initialize(value, unit)
-    if (unit == 'C') || (unit == 'c')
+    case unit
+    when 'C', 'c'
       @value = Celsius.new(value)
-    elsif (unit == 'K') || (unit == 'k')
+    when 'K', 'k'
       @value = Kelvin.new(value)
-    elsif (unit == 'F') || (unit == 'f')
+    when 'F', 'f'
       @value = Fahrenheit.new(value)
     end
   end

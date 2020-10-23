@@ -3,10 +3,9 @@
 require 'csv'
 
 class StatGetter
-  
   def initialize(file_path)
-    @col = Array.new
-    CSV.foreach(file_path, { :col_sep => ';' }) do |row|
+    @col = []
+    CSV.foreach(file_path, { col_sep: ';' }) do |row|
       @col << row[1].to_f
     end
   end
@@ -25,7 +24,7 @@ class StatGetter
 
   def get_corrected_dispersion
     n = @col.size
-    _x = @col.inject { |sum, el| sum + el }.to_f / n
-    @col.inject { |sum, el| sum + (el - _x) ** 2 }.to_f / (n - 1)
+    x = @col.inject { |sum, el| sum + el }.to_f / n
+    @col.inject { |sum, el| sum + (el - x)**2 }.to_f / (n - 1)
   end
 end
