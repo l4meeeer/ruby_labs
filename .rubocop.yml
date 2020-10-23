@@ -1,14 +1,15 @@
-Metrics/LineLength:
-  Max: 120
+  AllCops:
+  NewCops: enable
 
 Style/Documentation:
   Enabled: false
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 Metrics/MethodLength:
-  Max: 15
+  Max: 20
 
-Metrics/CyclomaticComplexity:
-  Enabled: false
-
-Metrics/PerceivedComplexity:
-  Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*_spec.rb'
