@@ -1,13 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.7'
-
 group :development, :test do
   gem 'byebug'
   gem 'rspec'
   gem 'rubocop'
   gem 'simplecov'
 end
-
-gem 'rspec'
-gem 'fastercsvge'
