@@ -1,6 +1,5 @@
 GEM
   remote: https://rubygems.org/
-  gem 'rake'
   specs:
     ast (2.4.1)
     byebug (11.1.3)
@@ -50,6 +49,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   fastercsv
+  rake
   rspec
   rubocop
   simplecov
